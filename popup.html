@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      margin: 0;
+    }
+    h2 {
+      margin-top: 0;
+      color: #2c3e50;
+      font-size: 18px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: 500;
+      color: #34495e;
+      font-size: 13px;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 13px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      width: 100%;
+      font-weight: 500;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .status {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      font-size: 13px;
+      display: none;
+    }
+    .status.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .status.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    .info {
+      background-color: #e7f3ff;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 15px;
+      font-size: 12px;
+      color: #014361;
+      line-height: 1.5;
+    }
+    .info a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .info a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h2>⚖️ Legal Terms Highlighter AI</h2>
+  
+  <div class="info">
+    <strong>API Keys Required:</strong><br>
+    Get your keys from:<br>
+    • OpenAI: <a href="https://platform.openai.com/api-keys" target="_blank">platform.openai.com</a><br>
+    • Tavily: <a href="https://tavily.com" target="_blank">tavily.com</a>
+  </div>
+
+  <div class="form-group">
+    <label for="openai-key">OpenAI API Key:</label>
+    <input type="text" id="openai-key" placeholder="sk-...">
+  </div>
+
+  <div class="form-group">
+    <label for="tavily-key">Tavily API Key:</label>
+    <input type="text" id="tavily-key" placeholder="tvly-...">
+  </div>
+
+  <button id="save-btn">Save API Keys</button>
+  
+  <div class="status" id="status"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
